@@ -1,0 +1,45 @@
+[
+  {
+    "eventTime": "2025-05-12T13:45:00Z",
+    "eventName": "CreateAccessKey",
+    "userIdentity": { "arn": "arn:aws:iam::111122223333:user/admin" },
+    "sourceIPAddress": "192.168.1.100"
+  },
+  {
+    "eventTime": "2025-05-12T14:00:00Z",
+    "eventName": "ConsoleLogin",
+    "userIdentity": { "arn": "arn:aws:iam::111122223333:user/devuser" },
+    "sourceIPAddress": "203.0.113.10",
+    "responseElements": { "ConsoleLogin": "Failure" }
+  },
+
+   {
+    "eventTime": "2025-05-12T15:00:00Z",
+    "eventName": "ConsoleLogin",
+    "userIdentity": {
+      "arn": "arn:aws:iam::111122223333:user/devuser"
+    },
+    "sourceIPAddress": "203.0.113.10",
+    "responseElements": {
+      "ConsoleLogin": "Failure"
+    }
+  },
+  {
+    "eventTime": "2025-05-12T15:00:30Z",
+    "eventName": "ConsoleLogin",
+    "userIdentity": {
+      "arn": "arn:aws:iam::111122223333:user/devuser"
+    },
+    "sourceIPAddress": "203.0.113.10",
+    "responseElements": {
+      "ConsoleLogin": "Failure"
+    }
+  },
+  
+  {
+    "eventTime": "2025-05-12T14:05:00Z",
+    "eventName": "PutUserPolicy",
+    "userIdentity": { "arn": "arn:aws:iam::111122223333:user/admin" },
+    "sourceIPAddress": "192.168.1.100"
+  }
+]

@@ -1,0 +1,14 @@
+# AWS Threat Detection SPL Queries
+
+# CreateAccessKey Detection
+index=aws_logs eventName=CreateAccessKey
+| eval mitre_technique="T1078.004 - Valid Accounts: Cloud Accounts"
+
+# IAM Policy Manipulation
+index=aws_logs eventName=PutUserPolicy OR eventName=CreateUser
+| eval mitre_technique="T1098 - Account Manipulation"
+
+# Brute Force Login Attempts
+index=aws_logs eventName=ConsoleLogin responseElements.ConsoleLogin="Failure"
+| stats count by userIdentity.arn, sourceIPAddress
+| where count > 5
